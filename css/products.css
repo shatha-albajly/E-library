@@ -19,29 +19,40 @@
 .open-all a {
   color: var(--blue-color);
 }
-.re-order input {
+.re-order select {
   border: 1px solid var(--dark-grey);
   padding: 0.2rem 0.5rem;
   padding-left: 2.5rem;
   margin-right: 1rem;
-  width: 50%;
+  width: 200px;
+  outline: none;
+}
+
+.select-wrap {
+  position: relative;
+}
+label {
+  position: absolute;
+  top: 3px;
+  padding: 0 20px;
 }
 
 .current-offers {
   display: grid;
   grid-template-columns: repeat(auto-fit, 180px);
   padding-bottom: 5rem;
-  align-items: center;
   justify-content: space-between;
 }
-.siderbar-navigator {
+.siderbar-navigator,
+.siderbar-navigator a {
   color: var(--blue-color);
   font-weight: 600;
   display: flex;
+  font-size: 0.8rem;
 }
 
 .siderbar-navigator div {
-  margin-left: 1rem;
+  margin-left: 0.1rem;
   font-size: 1rem;
 }
 .category-header {
@@ -124,6 +135,7 @@
 
 .product {
   width: 180px;
+  margin: 0.2rem 0;
 
   border: 1px solid var(--items-border);
   border-radius: 5px;
