@@ -34,6 +34,7 @@ let basket = JSON.parse(localStorage.getItem("basket")); // Parse data from loca
 let totalPrice = 0;
 basket.forEach((item) => {
   totalPrice += item.elementPrice * item.elementQuantity;
+  const itemPrice = item.elementPrice * item.elementQuantity;
 
   const html_code = `
   <div class="product-first-row">
@@ -56,7 +57,7 @@ basket.forEach((item) => {
       </div>
       <div class="price-box">
         <div class="price">
-          <p>${item.elementPrice}</p>
+          <p>${itemPrice}</p>
 
           <span class="price_currency"> رس </span>
         </div>
