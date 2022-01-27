@@ -2,26 +2,53 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>checkout page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
 
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/book.css" />
-    <link rel="stylesheet" href="css/card.css" />
-    <link rel="stylesheet" href="css/checkout.css" />
+    <title>E-library</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/products.css" />
+
+    <link rel="stylesheet" href="../css/book.css" />
   </head>
   <body dir="rtl">
     <!-- header start -->
     <header>
-      <!-- <div class="finish-message"> -->
-        
+      <div class="model-container">
+        <div class="wrap-img">
+          <img src="" alt="" />
+          <div
+            class="exit"
+            onclick="exit_fun()"
+            style="position: absolute; top: 20%; left: 70%"
+          >
+            <img
+              src="../images/svgs/xwhite.svg
+              "
+              style="width: 20px"
+              alt=""
+            />
+          </div>
+        </div>
+        <ul>
+          <li class="arrow right-arrow">
+            <i class="fas fa-angle-right"></i>
+          </li>
+          <li class="arrow left-arrow">
+            <i class="fas fa-angle-left"></i>
+          </li>
+        </ul>
       </div>
       <div class="section-list">
         <nav>
           <ul class="header-items">
             <div class="header-item">
               <img
-                src="images/svgs/person.svg"
+                src="../images/svgs/person.svg"
                 alt="person icon"
                 style="width: 20px; height: 20px"
               />
@@ -44,15 +71,15 @@
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/mainPage.svg"
+                src="../images/svgs/mainPage.svg"
                 alt="star icon"
                 style="width: 20px; height: 20px"
               />
-              <li><a href="index.html">الرئيسية</a></li>
+              <li><a href="../index.html">الرئيسية</a></li>
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/whoAreWe.svg"
+                src="../images/svgs/whoAreWe.svg"
                 alt="who are we policy icon"
                 style="width: 20px; height: 20px"
               />
@@ -60,7 +87,7 @@
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/callUs.svg"
+                src="../images/svgs/callUs.svg"
                 alt="call Usicon"
                 style="width: 20px; height: 20px"
               />
@@ -68,7 +95,7 @@
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/help.svg"
+                src="../images/svgs/help.svg"
                 alt="help icon"
                 style="width: 20px; height: 20px"
               />
@@ -76,7 +103,7 @@
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/privacyPolicy.svg"
+                src="../images/svgs/privacyPolicy.svg"
                 alt="privacy policy icon"
                 style="width: 20px; height: 20px"
               />
@@ -84,7 +111,7 @@
             </div>
             <div class="header-item">
               <img
-                src="images/svgs/saudia.svg"
+                src="../images/svgs/saudia.svg"
                 alt="country icon"
                 style="width: 20px; height: 20px"
               />
@@ -93,7 +120,7 @@
             </div>
             <div dir="ltr" class="header-item">
               <img
-                src="images/svgs/EnglishArabic.svg"
+                src="../images/svgs/EnglishArabic.svg"
                 alt="English to arabic icon"
                 style="width: 20px; height: 20px"
               />
@@ -101,21 +128,17 @@
             </div>
           </ul>
           <label id="sandwish">
-            <img
-              src="images/svgs/sandwish.svg"
-              style="width: 20px; margin-right: 1rem"
-              alt=""
-            />
+            <img src="../images/svgs/sandwish.svg" style="width: 20px" alt="" />
           </label>
           <!-- <label id="close-nav">
-            <img src="images/svgs/xsandwish.svg" style="width: 20px" alt="" />
+            <img src="../images/svgs/xsandwish.svg" style="width: 20px" alt="" />
           </label> -->
         </nav>
       </div>
       <div class="search-header">
-        <a class="logo" href="index.html">
+        <a class="logo" href="../index.html">
           <img
-            src="images/svgs/logo.svg"
+            src="../images/svgs/logo.svg"
             alt=""
             style="width: 180px; height: 50px"
           />
@@ -125,7 +148,7 @@
             <input id="search" type="search" placeholder="البحث" type="text" />
             <div class="search-icon">
               <img
-                src="images/svgs/search.svg"
+                src="../images/svgs/search.svg"
                 alt=""
                 style="width: 20px; height: 20px"
               />
@@ -134,7 +157,7 @@
 
           <a class="basket" href="card.html">
             <img
-              src="images/svgs/red-basket.svg"
+              src="../images/svgs/red-basket.svg"
               style="width: 35px; height: 35px"
               alt="red basket"
             />
@@ -150,7 +173,6 @@
       </div>
     </header>
     <!-- end header -->
-
     <!-- signup and login start -->
     <section>
       <div class="signup-model">
@@ -159,8 +181,8 @@
           <div class="signup">
             <div class="exit" onclick="exit_fun()">
               <img
-                src="images/svgs/x.svg
-              "
+                src="../images/svgs/x.svg
+          "
                 style="width: 20px"
                 alt=""
               />
@@ -232,8 +254,8 @@
           <div class="login">
             <div class="exit" onclick="exit_fun()">
               <img
-                src="images/svgs/x.svg
-              "
+                src="../images/svgs/x.svg
+          "
                 style="width: 20px"
                 alt=""
               />
@@ -266,128 +288,242 @@
     </section>
     <!-- signup and login end -->
 
-    <!-- start main -->
-    <main>
-      <div class="checkout-cards">
-        <div class="checkout-card active">
-          <form>
-            <h1 class="login-title">البيانات الشخصية</h1>
+    <!-- main start -->
+    <main dir="rtl" class="book-item">
+      <div class="container siderbar-navigator" >
+        
+          <div class="main"style="margin-right: 2rem;">
+            <a href="../index.html">الرئيسية</a>
+          </div>
+          <div>/</div>
+          <div class="sub-main">
+            <a href="category.html">الكتب العربية</a>
+          </div>
+          <div>/</div>
 
-            <div class="two-input">
-              <div class="input-wrap">
-                <input name="number" type="tel" />
-                <label for="name">رقم الجوال</label>
-              </div>
-              <div class="input-wrap">
-                <label for="">رمز البلد</label>
-                <input type="password" name="password" />
-              </div>
-            </div>
+          <div class="branch">
+            <a href="category.html">كتب الكترونية</a>
+          </div>
+          <div>/</div>
 
-            <div class="input-wrap">
-              <label for="password">الاسم الاول</label>
-              <input type="password" name="password" />
-            </div>
+          <div class="book_page">
+            <a href="book.html">لأنك الله</a>
+          </div>
 
-            <div class="input-wrap">
-              <label for="password">اسم العائله</label>
-              <input type="password" name="password" />
-            </div>
-
-            <div class="input-wrap">
-              <label for="password">البريد الالكتروني</label>
-              <input type="password" name="password" />
-            </div>
-
-            <div class="input-wrap">
-              <label for="password">كلمة السر</label>
-              <input type="password" name="password" />
-            </div>
-          </form>
         </div>
-        <div class="checkout-card">
-          <form>
-            <h1 class="login-title">بيانات الدفع</h1>
-            <div class="input-wrap">
-              <label for="password">الاسم الاول</label>
-              <input type="password" name="password" />
-            </div>
 
-            <div class="input-wrap">
-              <label for="password">اسم العائله</label>
-              <input type="password" name="password" />
+       
+      </div>
+      <div class="book container">
+        <div class="book-pictures">
+          <div class="pictures-box">
+            <div class="picture-container">
+              <img src="../images/book1front.jpg" alt="" />
             </div>
-
-            <div class="input-wrap">
-              <label for="password">البريد الالكتروني</label>
-              <input type="password" name="password" />
-            </div>
-            <div class="input-wrap">
-              <label for="date">تاريخ انتهاء البطاقة</label>
-              <input type="date" name="date" />
-            </div>
-
-            <div class="two-input">
-              <div class="input-wrap">
-                <input name="number" type="tel" />
-                <label for="name">رقم البطاقة</label>
-              </div>
-              <div class="input-wrap">
-                <label for="">CV2</label>
-                <input type="password" name="password" />
-              </div>
-            </div>
-          </form>
-        </div>
-        <div class="checkout-card">
-          <div class="card-content">
-            <div class="total-price">
-              <div>
-                <div class="total-price-row total-row">
-                  <p>المجموع</p>
-                  <p id="total">0</p>
+            <div class="pictures-nav">
+              <div class="small-pictures">
+                <div class="img-card">
+                  <img src="../images/book1front.jpg" alt="" />
                 </div>
-                <div class="total-price-row shiping-row">
-                  <p>تكاليف الشحن</p>
-                  <p id="shipping-price">مجاني</p>
-                </div>
-                <div class="total-price-row final-total-row">
-                  <p>المجموع الكلي</p>
-                  <p id="final-total-price">0</p>
+                <div class="img-card">
+                  <img src="../images/book2back.jpg" alt="" />
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="book-details">
+          <div class="product-info">
+            <div class="product-name">
+              <h2>
+                <a href="book.html">
+                  <p>لانك الله رحلة الى السماء السابعة‎</p>
+                </a>
+              </h2>
+            </div>
+            <div class="price-box">
+              <div class="price">
+                <p>17.54</p>
 
-        <div class="checkout-card">
-          <p>تمت العملية بنجاح</p>
-          <p>اضغط على زر التالي لإنهاء العمليه</p>
-          <a
-            id="progress-done"
-            href="index.html"
-            onclick="clear_storage()"
-            class="btn"
-            >انهاء</a
-          >
+                <span class="price_currency"> رس </span>
+              </div>
+            </div>
+            <div class="book-more-details">
+              <div>وحدة البيع Each</div>
+              <div class="review">
+                <div class="stars">
+                  <img src="../images/svgs//yellowstar.svg" alt="" />
+                  <img src="../images/svgs//yellowstar.svg" alt="" />
+                  <img src="../images/svgs//yellowstar.svg" alt="" />
+                  <img src="../images/svgs//yellowstar.svg" alt="" />
+                  <img src="../images/svgs//yellowstar.svg" alt="" />
+                </div>
+                <div class="review-text">(15 الراجعات)</div>
+              </div>
+              <div>رقم الصنف j88413442 رقم المنتج 4</div>
+            </div>
+
+            <div class="book-type-container">
+              <div class="book-type" >الصيغ المتوفرة:</div>
+              <div class="row">
+                  <div class="row_item">
+                    <div class="outer-circle">
+                      <div class="inner-circle"></div>
+                    </div>
+                      
+                      <a href="" >كتاب إلكتروني</a>
+                  </div>
+                  <div class="price-box">
+                    <div class="price">
+                      <p>17.54</p>
+      
+                      <span class="price_currency"> رس </span>
+                    </div>
+                  </div>
+              </div>
+              <div class="row">
+                <div class="row_item">
+                  <div class="outer-circle">
+                    <div class="inner-circle"></div>
+                  </div>
+                  <a href="" >كتاب إلكتروني</a>
+              </div>
+              <div class="price-box">
+                <div class="price">
+                  <p>17.54</p>
+  
+                  <span class="price_currency"> رس </span>
+                </div>
+              </div>
+              </div>
+          </div>
+            
+          </div>
+        </div>
+
+        <div class="book-order">
+          <div class="book-order-box">
+            <div class="yellow-note">
+              <p>
+                <span>ملاحظة: </span>
+                سيتم اضافة هذا الكتاب الالكتروني الى مكتبتك في قارئ جرير
+              </p>
+              <a href="#">اقرا المزيد</a>
+            </div>
+            <div class="add-to-basket-input">
+              <label for="bookNum"></label>
+
+              <select name="booksNum" id="booksNum">
+                <option value="2">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <button onclick="btn_card_fun()" class="btn-card">
+                <img src="../images/svgs/red-basket.svg" alt="" />
+                <p>اضف الى السلة</p>
+              </button>
+            </div>
+            <div class="cards-notes">
+              <div>
+                <img src="../images/svgs/card1-1.svg" alt="" />
+                <p>تسوق أمن</p>
+              </div>
+              <div>
+                <img src="../images/svgs/card2.svg" alt="" />
+
+                <p>اصلي ومضمون</p>
+              </div>
+              <div>
+                <img src="../images/svgs/card3.svg" alt="" />
+
+                <p>شحن سريع ومجاني</p>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="page-share">
+              <button class="share">
+                <img src="../images/svgs/share.svg" alt="" />
+                <p>مشاركة</p>
+              </button>
+              <button class="favorite">
+                <img src="../images/svgs/favorite.svg" alt="" />
+                <p>المفضلة</p>
+              </button>
+              <button class="compare">
+                <img src="../images/svgs/compare.svg" alt="" />
+                <p>مقارنة</p>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="container progress">
-        <div id="progress">
-          <div id="progress-bar"></div>
-          <ul id="progress-num">
-            <li class="step active">1</li>
-            <li class="step">2</li>
-            <li class="step">3</li>
-            <li class="step">4</li>
-          </ul>
-        </div>
-        <div class="btns">
-          <button id="progress-prev" class="btn" disabled>السابق</button>
-          <button id="progress-next" class="btn">التالي</button>
-        </div>
+      <div dir="rtl" class="book-description">
+        <p>
+          كتاب يتحدث عن بعض اسماء الله الحسنىوكيف نعيشها في حياتنا حرصالمؤلف أن
+          يكون الكتاب مناسبا لمن هم متوسطي الثقافة ويكون ممناسبا للمحتاج و
+          المريض و السليم
+        </p>
       </div>
+      
     </main>
+
+    <!-- main end -->
+    <section class="container book-details-section">
+      <h2>المواصفات</h2>
+      <table  class="table">
+        <tbody class="table-body">
+          <tr class="table-row">
+            <th class="table-item">
+          رقم الصنف
+          </th>
+        <td class="table-item">
+        465531</td>
+      
+        </tr>
+        
+        <tr class="table-row">
+          <th class="table-item">
+        رقم المصنع
+      </th> 
+      <td class="table-item">
+        156
+      </td>
+    </tr>
+    <tr class="table-row"><th class="table-item">
+        تاريخ النشر
+      </th> 
+      <td class="table-item">
+        ‎2016‎‎
+      </td>
+    </tr>
+    <tr class="table-row"><th class="table-item">
+        الناشر
+      </th> 
+    <td class="table-item">
+        ‎دار الحضارة للنشر والتوزيع‎
+      </td>
+    </tr>
+    <tr class="table-row"><th class="table-item">
+        عدد الصفحات
+      </th> 
+    <td class="table-item">
+        ‎192‎‎
+      </td>
+  </tr><tr class="table-row"><th class="table-item">
+        صيغة الكتاب
+      </th> <td class="table-item">
+        غلاف ورقي
+      </td></tr><tr class="table-row"><th class="table-item">
+        المؤلف
+      </th> <td class="table-item">
+        ‎علي جابر الفيفي‎
+      </td></tr><tr class="table-row"><th class="table-item">
+        وزن الشحن
+      </th> <td class="table-item">
+        0.24
+      </td></tr></tbody></table>
+    </section>
 
     <!-- footer start -->
     <footer>
@@ -411,7 +547,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/facebook.svg"
+                      src="../images/svgs/facebook.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -420,7 +556,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/twitter.svg"
+                      src="../images/svgs/twitter.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -429,7 +565,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/youtube.svg"
+                      src="../images/svgs/youtube.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -438,7 +574,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/linkedin.svg"
+                      src="../images/svgs/linkedin.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -447,7 +583,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/sanpchat.svg"
+                      src="../images/svgs/sanpchat.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -456,7 +592,7 @@
                 <li>
                   <a href="#">
                     <img
-                      src="images/svgs/tiktok.svg"
+                      src="../images/svgs/tiktok.svg"
                       style="width: 20px; height: 20px"
                       alt=""
                   /></a>
@@ -595,18 +731,16 @@
             </p>
           </div>
           <div dir="rtl" class="payment-options">
-            <img src="images/American-Express-Logo.png" alt="" />
-            <img src="images/Mastercard-logo.svg.png" alt="" />
-            <img src="images/Visa-Logo.png" alt="" />
-            <img src="images/1024px-Mada_Logo.svg.png" alt="" />
+            <img src="../images/American-Express-Logo.png" alt="" />
+            <img src="../images/Mastercard-logo.svg.png" alt="" />
+            <img src="../images/Visa-Logo.png" alt="" />
+            <img src="../images/1024px-Mada_Logo.svg.png" alt="" />
           </div>
         </div>
       </div>
     </footer>
     <!-- footer end -->
-    <script src="js/scripts.js"></script>
-    <script src="js/card.js"></script>
-
-    <script src="js/checkout.js"></script>
+    <script src="../js/bookscript.js"></script>
+    <script src="../js/scripts.js"></script>
   </body>
 </html>

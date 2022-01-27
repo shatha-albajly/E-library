@@ -42,7 +42,7 @@ body {
   overflow-x: hidden;
 }
 .container {
-  max-width: 93%;
+  max-width: 95%;
   margin: 0 auto;
   overflow: auto;
   padding: 0 1rem;
@@ -206,7 +206,7 @@ header img {
 .signup-model,
 .login-model {
   background-color: rgba(0, 0, 0, 0.5);
-  width: 98vw;
+  width: 100vw;
   height: 300vh;
   position: absolute;
   z-index: 20;

@@ -248,6 +248,7 @@ label {
 }
 .product-page .current-offers {
   display: grid;
+  justify-content: space-between;
   grid-template-columns: repeat(auto-fit, 180px);
   grid-column-gap: 0.2rem;
   grid-row-gap: 0.2rem;

@@ -39,7 +39,7 @@ basket.forEach((item) => {
   const html_code = `
   <div class="product-first-row">
   <div class="product-image">
-    <img src="${item.elementImg}" alt="" />
+    <img src="../${item.elementImg}" alt="" />
   </div>
   <div class="product-div-without-image">
   <div class="product-wrap">

@@ -64,7 +64,7 @@
 .model-container {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   position: absolute;
   z-index: 1;
   display: none;
@@ -353,6 +353,7 @@ tr {
   background: #fff;
   padding: 1rem;
 }
+
 .checkout-card {
   display: none;
 }
@@ -461,10 +462,10 @@ input[type="date"] {
 }
 .checkout-card .total-price {
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
   min-width: 230px;
   height: auto;
-  padding: 2rem;
+  padding: 3rem;
   margin: 0 auto;
 }
 
