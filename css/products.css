@@ -270,7 +270,7 @@ label {
 
 .product-page .open-all p {
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 .product-page .add-to-links {
   padding: 1rem;
@@ -285,6 +285,9 @@ label {
   }
   .all-items {
     width: 100%;
+  }
+  .product-page .current-offers {
+    justify-content: center;
   }
 }
 

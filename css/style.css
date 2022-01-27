@@ -786,6 +786,9 @@ nav #sandwish {
   .nav__ul {
     display: none;
   }
+  .product-page .current-offers {
+    justify-content: center;
+  }
 }
 
 @media screen and (max-width: 800px) {
