@@ -57,7 +57,8 @@ a {
 .left {
   width: 45%;
 }
-input {
+input,
+select {
   border: 0;
   outline: none;
 }
@@ -202,9 +203,9 @@ header img {
 .login-model {
   background-color: rgba(0, 0, 0, 0.5);
   width: 98vw;
-  height: 100vh;
+  height: 300vh;
   position: absolute;
-  z-index: 1;
+  z-index: 20;
   display: none;
   top: 0;
 }
@@ -256,7 +257,8 @@ header img {
   width: 100%;
   padding-bottom: 0.5rem;
 }
-input {
+input,
+select {
   margin: 0 auto;
   width: 100%;
   border-radius: 5px;
@@ -264,11 +266,17 @@ input {
   background-color: var(--light-gray);
   outline: none;
 }
+option {
+  text-align: center;
+  font-size: 2rem;
+
+  color: var(--light-gray);
+}
 form label {
   position: absolute;
   top: 2px;
   right: 8px;
-  z-index: 29;
+  z-index: 1;
   font-size: 0.8rem;
   color: var(--gray-color);
 }
@@ -670,7 +678,7 @@ nav #sandwish {
   }
   nav ul {
     position: fixed;
-    z-index: 20;
+    z-index: 4;
 
     top: 50px;
     right: 0;

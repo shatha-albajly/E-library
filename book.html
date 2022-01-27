@@ -173,7 +173,6 @@
       </div>
     </header>
     <!-- end header -->
-
     <!-- signup and login start -->
     <section>
       <div class="signup-model">
@@ -183,7 +182,7 @@
             <div class="exit" onclick="exit_fun()">
               <img
                 src="images/svgs/x.svg
-              "
+          "
                 style="width: 20px"
                 alt=""
               />
@@ -197,7 +196,10 @@
                 </div>
                 <div class="input-wrap">
                   <label for="">رمز البلد</label>
-                  <input type="password" name="password" />
+                  <select>
+                    <option>+967</option>
+                    <option>+966</option>
+                  </select>
                 </div>
               </div>
               <p>سوف نرسل لك رمز التحقق عن طريق رسالة نصية</p>
@@ -232,11 +234,11 @@
               </div>
 
               <div class="checkbox-div">
-                <span></span>
+                <input type="checkbox" />
                 <p>أوافق على الشروط والأحكام</p>
               </div>
               <div class="checkbox-div">
-                <span></span>
+                <input type="checkbox" />
 
                 <p>التسجيل للانضمام للنشرة البريدية</p>
               </div>
@@ -253,7 +255,7 @@
             <div class="exit" onclick="exit_fun()">
               <img
                 src="images/svgs/x.svg
-              "
+          "
                 style="width: 20px"
                 alt=""
               />
@@ -288,24 +290,29 @@
 
     <!-- main start -->
     <main dir="rtl" class="book-item">
-      <div class="container siderbar-navigator">
-        <div class="main">
-          <p>الرئيسية</p>
-        </div>
-        <div>/</div>
-        <div class="sub-main">
-          <p>الكتب العربية</p>
-        </div>
-        <div>/</div>
+      <div class="container siderbar-navigator" >
+        
+          <div class="main"style="margin-right: 2rem;">
+            <a href="index.html">الرئيسية</a>
+          </div>
+          <div>/</div>
+          <div class="sub-main">
+            <a href="category.html">الكتب العربية</a>
+          </div>
+          <div>/</div>
 
-        <div class="branch">
-          <p>كتب الكترونية</p>
-        </div>
-        <div>/</div>
+          <div class="branch">
+            <a href="category.html">كتب الكترونية</a>
+          </div>
+          <div>/</div>
 
-        <div class="branch">
-          <p>لأنك الله</p>
+          <div class="book_page">
+            <a href="book.html">لأنك الله</a>
+          </div>
+
         </div>
+
+       
       </div>
       <div class="book container">
         <div class="book-pictures">
@@ -422,6 +429,7 @@
           المريض و السليم
         </p>
       </div>
+      
     </main>
 
     <!-- main end -->

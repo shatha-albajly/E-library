@@ -215,3 +215,16 @@ if (window.location.hash) {
     document.body.style.direction = "rtl";
   }
 }
+
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset;
+  console.log(currentScrollPos);
+  if (prevScrollpos + 10 > currentScrollPos) {
+  } else {
+    signup_model.style.display = "none";
+    login_model.style.display = "none";
+    model_container.style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+};
