@@ -90,6 +90,8 @@
   justify-content: space-between;
   width: 40%;
   position: absolute;
+  top: 40%;
+  left: 30%;
 }
 .arrow {
   font-size: 4rem;
@@ -102,8 +104,13 @@
 .right-arrow {
   float: right;
 }
+/* .model-container .exit {
+  position: absolute;
+} */
 
 .book-description p {
+  font-size: 0.8rem;
+
   padding: 1.5rem;
   background-color: var(--light-gray);
   border-top: 1px solid var(--gray-color);
@@ -140,12 +147,15 @@
 .book-order .add-to-basket-input {
   display: flex;
   margin: 1rem 0;
+  justify-content: space-between;
 }
 
-.book-order .add-to-basket-input input {
+.book-order .add-to-basket-input select {
   width: 20%;
   margin-left: 0.5rem;
   background-color: var(--light-gray);
+  border: 0;
+  outline: 0;
 }
 
 .book-order .add-to-basket-input img {
@@ -168,6 +178,7 @@
   padding: 0.5rem;
   align-items: center;
   grid-template-columns: 1fr 1fr;
+  font-size: 0.7rem;
 }
 .book-order .cards-notes > div {
   display: flex;
@@ -175,23 +186,75 @@
 }
 
 .book-order .cards-notes img {
-  width: 12px;
+  width: 20px;
   height: auto;
   margin-left: 0.3rem;
 }
 
 .book-details {
-  padding: 1.5rem;
+  padding: 0 1.5rem;
 }
 .book-details .product-name p {
   color: var(--dark-grey);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
 }
 .book-details .price-box .price {
   justify-content: start;
 }
+.divider {
+  border: 1px solid var(--light-gray);
+  margin: 1.5rem 0;
+}
+.page-share {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.page-share img {
+  width: 10px;
+  margin-left: 0.5rem;
+}
+.page-share button {
+  display: flex;
+  align-items: center;
 
+  padding: 8px 13px;
+  border: 0;
+  box-shadow: 0 3px 5px rgba(1 1 1 / 15%);
+}
+.book-more-details {
+  font-size: 0.9rem;
+  text-align: left;
+  display: flex;
+  color: var(--gray-black);
+  flex-direction: column;
+  align-items: flex-end;
+}
+.book-more-details div {
+  font-size: 0.7rem;
+  margin: 0.1rem 0;
+}
+.book-more-details {
+  font-size: 0.6rem;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.book-more-details .review img {
+  width: 15px;
+}
+.review {
+  display: flex;
+}
+.review .stars {
+  display: flex;
+}
+.review .review-text {
+  color: var(--blue-color);
+  font-weight: 600;
+}
 @media screen and (max-width: 800px) {
   .book {
     flex-direction: column;
@@ -209,11 +272,11 @@
   height: 75vh;
 }
 
-.checkout-card:nth-of-type(1),
-.checkout-card:nth-of-type(2) {
+.checkout-card {
+  text-align: center;
+
   width: 50%;
   margin: 0 auto;
-
   box-shadow: 0 1px 5px 0 rgb(0 0 0 / 20%), 0 3px 1px -2px rgb(0 0 0 / 12%),
     0 2px 2px 0 rgb(0 0 0 / 14%);
   overflow: auto;
@@ -230,6 +293,7 @@
 }
 .checkout-card form {
   width: 100%;
+  display: block;
 }
 .checkout-card.active {
   border: 0;
@@ -238,6 +302,12 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
+}
+.checkout-cards h1 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid var(--gray-black);
+  color: var(--gray-black);
 }
 
 #progress {
@@ -285,7 +355,7 @@
   z-index: 1;
 }
 #progress-num .step.active {
-  border: none;
+  border-color: var(--red-color);
   background-color: var(--red-color);
   color: var(--white-color);
 }
@@ -294,9 +364,52 @@
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 .btn {
   border: 1px solid var(--gray-color);
   border-radius: 5px;
   padding: 6px 14px;
+}
+#progress-done {
+  display: block;
+  border: none;
+  padding: 6px 25px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--white-color);
+  background-color: var(--red-color);
+  margin-top: 1.5rem;
+}
+input[type="date"] {
+  color: var(--gray-black);
+  background: var(--light-gray);
+
+  cursor: pointer;
+}
+
+::-webkit-calendar-picker-indicator {
+  display: none;
+}
+.checkout-card .total-price {
+  width: 100%;
+  max-width: 300px;
+  min-width: 230px;
+  height: auto;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 800px) {
+  .checkout-card {
+    width: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .checkout-cards h1 {
+    font-size: 1rem;
+  }
+  .checkout-card {
+    width: 80%;
+  }
 }

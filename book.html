@@ -10,17 +10,42 @@
     />
 
     <title>E-library</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/products.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/products.css" />
 
-    <link rel="stylesheet" href="../css/book.css" />
+    <link rel="stylesheet" href="css/book.css" />
   </head>
-  <body>
+  <body dir="rtl">
     <!-- header start -->
     <header>
+      <div class="model-container">
+        <div class="wrap-img">
+          <img src="" alt="" />
+          <div
+            class="exit"
+            onclick="exit_fun()"
+            style="position: absolute; top: 20%; left: 70%"
+          >
+            <img
+              src="images/svgs/xwhite.svg
+              "
+              style="width: 20px"
+              alt=""
+            />
+          </div>
+        </div>
+        <ul>
+          <li class="arrow right-arrow">
+            <i class="fas fa-angle-right"></i>
+          </li>
+          <li class="arrow left-arrow">
+            <i class="fas fa-angle-left"></i>
+          </li>
+        </ul>
+      </div>
       <div class="section-list">
         <nav>
-          <ul dir="rtl" class="header-items">
+          <ul class="header-items">
             <div class="header-item">
               <img
                 src="images/svgs/person.svg"
@@ -29,9 +54,18 @@
               />
               <li>
                 <a href="#">
-                  <span class="show-signup-model"> سجل الان</span>
+                  <span
+                    class="show-signup-model"
+                    onclick="show_signup_model_fun()"
+                  >
+                    سجل الان</span
+                  >
                   <span>أو</span>
-                  <span class="show-login-model">ادخل لحسابك</span>
+                  <span
+                    class="show-login-model"
+                    onclick="show_login_model_fun()"
+                    >ادخل لحسابك</span
+                  >
                 </a>
               </li>
             </div>
@@ -41,7 +75,7 @@
                 alt="star icon"
                 style="width: 20px; height: 20px"
               />
-              <li><a href="#">الرئيسية</a></li>
+              <li><a href="index.html">الرئيسية</a></li>
             </div>
             <div class="header-item">
               <img
@@ -93,16 +127,22 @@
               <li>English</li>
             </div>
           </ul>
+          <label id="sandwish">
+            <img src="images/svgs/sandwish.svg" style="width: 20px" alt="" />
+          </label>
+          <!-- <label id="close-nav">
+            <img src="images/svgs/xsandwish.svg" style="width: 20px" alt="" />
+          </label> -->
         </nav>
       </div>
-      <div dir="rtl" class="search-header">
-        <div class="logo">
+      <div class="search-header">
+        <a class="logo" href="index.html">
           <img
             src="images/svgs/logo.svg"
             alt=""
             style="width: 180px; height: 50px"
           />
-        </div>
+        </a>
         <div class="search-section">
           <div class="search-bar">
             <input id="search" type="search" placeholder="البحث" type="text" />
@@ -115,7 +155,7 @@
             </div>
           </div>
 
-          <div class="basket">
+          <a class="basket" href="card.html">
             <img
               src="images/svgs/red-basket.svg"
               style="width: 35px; height: 35px"
@@ -124,11 +164,127 @@
             <div class="button__badge">
               <div class="badge">0</div>
             </div>
+          </a>
+          <div class="change-language">
+            <button onclick='changeLanguage("en")'>English</button>
+            <button onclick='changeLanguage("ar")'>عربي</button>
           </div>
         </div>
       </div>
     </header>
     <!-- end header -->
+
+    <!-- signup and login start -->
+    <section>
+      <div class="signup-model">
+        <!-- login and sign up section start -->
+        <div class="login-signup">
+          <div class="signup">
+            <div class="exit" onclick="exit_fun()">
+              <img
+                src="images/svgs/x.svg
+              "
+                style="width: 20px"
+                alt=""
+              />
+            </div>
+            <h1 class="login-title">إنشاء حساب</h1>
+            <form id="signup-form" class="signup-form">
+              <div class="two-input">
+                <div class="input-wrap">
+                  <input name="number" type="tel" />
+                  <label for="name">رقم الجوال</label>
+                </div>
+                <div class="input-wrap">
+                  <label for="">رمز البلد</label>
+                  <input type="password" name="password" />
+                </div>
+              </div>
+              <p>سوف نرسل لك رمز التحقق عن طريق رسالة نصية</p>
+
+              <div class="input-wrap">
+                <label for="password">ارسال رمز التحقق</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">الاسم الاول</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">اسم العائله</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">البريد الالكتروني</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="input-wrap">
+                <label for="password">تاكيد البريد الالكتروني</label>
+                <input type="password" name="password" />
+              </div>
+              <div class="input-wrap">
+                <label for="password">كلمة السر</label>
+                <input type="password" name="password" />
+              </div>
+
+              <div class="checkbox-div">
+                <span></span>
+                <p>أوافق على الشروط والأحكام</p>
+              </div>
+              <div class="checkbox-div">
+                <span></span>
+
+                <p>التسجيل للانضمام للنشرة البريدية</p>
+              </div>
+
+              <button>انشاء حساب</button>
+            </form>
+          </div>
+        </div>
+        <!-- login and sign up section start end -->
+      </div>
+      <div class="login-model">
+        <div class="login-signup">
+          <div class="login">
+            <div class="exit" onclick="exit_fun()">
+              <img
+                src="images/svgs/x.svg
+              "
+                style="width: 20px"
+                alt=""
+              />
+            </div>
+            <h1 class="login-title">تسجيل الدخول</h1>
+            <form id="login-form" class="login-form">
+              <div class="input-wrap">
+                <input
+                  name="email"
+                  type="email"
+                  title="البريد الالكتروني أو رقم الجوال"
+                />
+                <label for="name">البريد الالكتروني أو رقم الجوال</label>
+              </div>
+              <div class="input-wrap">
+                <label for="password">كلمة السر</label>
+                <input type="password" name="password" />
+                <p class="forget">نسيت؟</p>
+              </div>
+              <button>تسجيل الدخول</button>
+            </form>
+
+            <div class="go-to-signup">
+              <p>ليس لديك حساب؟</p>
+              <p class="new-account-button">انشاء حساب جديد</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- signup and login end -->
 
     <!-- main start -->
     <main dir="rtl" class="book-item">
@@ -155,15 +311,15 @@
         <div class="book-pictures">
           <div class="pictures-box">
             <div class="picture-container">
-              <img src="../images/book1front.jpg" alt="" />
+              <img src="images/book1front.jpg" alt="" />
             </div>
             <div class="pictures-nav">
               <div class="small-pictures">
                 <div class="img-card">
-                  <img src="../images/book1front.jpg" alt="" />
+                  <img src="images/book1front.jpg" alt="" />
                 </div>
                 <div class="img-card">
-                  <img src="../images/book2back.jpg" alt="" />
+                  <img src="images/book2back.jpg" alt="" />
                 </div>
               </div>
             </div>
@@ -185,6 +341,20 @@
                 <span class="price_currency"> رس </span>
               </div>
             </div>
+            <div class="book-more-details">
+              <div>وحدة البيع Each</div>
+              <div class="review">
+                <div class="stars">
+                  <img src="images/svgs//yellowstar.svg" alt="" />
+                  <img src="images/svgs//yellowstar.svg" alt="" />
+                  <img src="images/svgs//yellowstar.svg" alt="" />
+                  <img src="images/svgs//yellowstar.svg" alt="" />
+                  <img src="images/svgs//yellowstar.svg" alt="" />
+                </div>
+                <div class="review-text">(15 الراجعات)</div>
+              </div>
+              <div>رقم الصنف j88413442 رقم المنتج 4</div>
+            </div>
           </div>
         </div>
 
@@ -198,7 +368,14 @@
               <a href="#">اقرا المزيد</a>
             </div>
             <div class="add-to-basket-input">
-              <input type="text" />
+              <label for="bookNum"></label>
+
+              <select name="booksNum" id="booksNum">
+                <option value="2">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
               <button onclick="btn_card_fun()" class="btn-card">
                 <img src="images/svgs/red-basket.svg" alt="" />
                 <p>اضف الى السلة</p>
@@ -206,19 +383,34 @@
             </div>
             <div class="cards-notes">
               <div>
-                <img src="images/svgs/whoAreWe.svg" alt="" />
+                <img src="images/svgs/card1-1.svg" alt="" />
                 <p>تسوق أمن</p>
               </div>
               <div>
-                <img src="images/svgs/whoAreWe.svg" alt="" />
+                <img src="images/svgs/card2.svg" alt="" />
 
                 <p>اصلي ومضمون</p>
               </div>
               <div>
-                <img src="images/svgs/whoAreWe.svg" alt="" />
+                <img src="images/svgs/card3.svg" alt="" />
 
                 <p>شحن سريع ومجاني</p>
               </div>
+            </div>
+            <div class="divider"></div>
+            <div class="page-share">
+              <button class="share">
+                <img src="images/svgs/share.svg" alt="" />
+                <p>مشاركة</p>
+              </button>
+              <button class="favorite">
+                <img src="images/svgs/favorite.svg" alt="" />
+                <p>المفضلة</p>
+              </button>
+              <button class="compare">
+                <img src="images/svgs/compare.svg" alt="" />
+                <p>مقارنة</p>
+              </button>
             </div>
           </div>
         </div>
@@ -233,6 +425,7 @@
     </main>
 
     <!-- main end -->
+    <section class="container book-details-section"></section>
 
     <!-- footer start -->
     <footer>
@@ -449,7 +642,7 @@
       </div>
     </footer>
     <!-- footer end -->
-    <script src="../js/bookscript.js"></script>
-    <!-- <script src="../js/scripts.js"></script> -->
+    <script src="js/bookscript.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>

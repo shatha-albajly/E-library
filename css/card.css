@@ -13,9 +13,12 @@
   margin: 1rem auto;
   box-shadow: 0 1px 3px rgba(1 1 1 / 15%);
   padding: 1rem;
+
+  width: 100%;
+}
+.product-first-row {
   display: flex;
   justify-content: start;
-  width: 100%;
 }
 .product-info {
   padding: 0;
@@ -25,9 +28,12 @@
   width: 100px;
 }
 .product-div-without-image {
-  display: flex;
   width: 100%;
+}
+.product-wrap {
+  display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
 .title-basket {
   display: flex;
@@ -50,6 +56,9 @@
   color: var(--dark-grey);
   font-size: 0.6rem;
   margin-bottom: 0.6rem;
+}
+.price {
+  margin-bottom: 1rem;
 }
 
 .total-price {
@@ -100,7 +109,81 @@
   border: 0;
   padding: 0.3rem 0;
 }
+.total-price-button button a {
+  color: var(--white-color);
+}
 
+/* increase decrease number */
+form {
+  text-align: center;
+  display: flex;
+}
+
+.value-button {
+  border: 1px solid #ddd;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  background: var(--light-gray);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 1.3rem;
+  color: var(--gray-black);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+input.number {
+  text-align: center;
+  border: none;
+  border: 1px solid #ddd;
+  background-color: var(--white-color);
+  margin: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.product button {
+  border-radius: 0;
+}
+
+/* divider */
+.divider {
+  border-bottom: 1px solid var(--light-gray);
+  width: 100%;
+  margin: 1rem 0;
+}
+.product-second-row {
+  display: flex;
+  color: var(--gray-black);
+  margin-right: 2rem;
+  align-items: center;
+}
+button.product-second-row {
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.product-second-row img {
+  margin-left: 0.3rem;
+}
 @media screen and (max-width: 800px) {
   .card-content {
     flex-direction: column;
@@ -113,6 +196,36 @@
 
   .total-price {
     min-width: 300px;
-    margin: 0 auto;
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card-content .product {
+    width: 85vw;
+    margin: 1rem auto;
+  }
+
+  .card-content .product p,
+  .card-content .product a {
+    font-size: 0.7rem !important;
+  }
+  .card-content .product-info {
+    padding: 0;
+    margin: 0;
+  }
+
+  .card-content .card-content .yellow-note {
+    width: 200px;
+    margin: 1rem;
+  }
+  .card-content .input.number {
+    width: 15px;
+    height: 15px;
+  }
+  .card-content .value-button {
+    width: 15px;
+    height: 14px;
+    font-size: 0.7rem;
   }
 }

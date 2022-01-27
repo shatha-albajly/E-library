@@ -7,11 +7,6 @@ const nextBtn = document.querySelector(".nextBtn");
 const prevBtn = document.querySelector(".prevBtn");
 const exit = document.querySelectorAll(".exit img");
 const timer = document.querySelectorAll(".clock");
-const img_cards = document.querySelectorAll(".img-card");
-const model_container = document.querySelector(".model-container");
-let img = document.querySelector(".model-container img");
-const left_arrow = document.querySelector(".model-container .left-arrow i");
-const right_arrow = document.querySelector(".model-container .right-arrow i");
 const circles = document.querySelectorAll(".circle");
 // search variables
 const search = document.getElementById("search");
@@ -20,26 +15,38 @@ const products = document.querySelectorAll(".product");
 const book_item = document.querySelector(".book-item");
 // add elements to the basket
 const add_to_basket = document.querySelectorAll(".btn-card");
+const sandwish = document.querySelector("#sandwish");
+const hide = document.querySelector(".hide");
 const badge = document.querySelector(".badge");
+const header_items = document.querySelector(".header-items");
+// sandwish
+sandwish.addEventListener("click", () => {
+  header_items.classList.toggle("hide");
+});
 slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
 });
 
 // slider
 let counter = 0;
-
-nextBtn.addEventListener("click", function () {
-  counter++;
-  carousel();
-});
-
-prevBtn.addEventListener("click", function () {
-  counter--;
-  carousel();
-});
-
+if (nextBtn) {
+  nextBtn.addEventListener("click", function () {
+    counter++;
+    carousel();
+  });
+}
+if (prevBtn) {
+  prevBtn.addEventListener("click", function () {
+    counter--;
+    carousel();
+  });
+}
 circles.forEach((circle, index) => {
   circle.addEventListener("click", () => {
+    circles.forEach((c) => {
+      c.classList.remove("active");
+    });
+
     counter = index;
     circle.classList.add("active");
     carousel();
@@ -47,11 +54,27 @@ circles.forEach((circle, index) => {
 });
 
 function carousel() {
-  if (counter <= 5) {
-    slides.forEach(function (slide) {
-      slide.style.transform = `translateX(-${counter * 100}%)`;
-    });
+  if (counter > 5) {
+    counter = 0;
+  } else if (counter < 0) {
+    counter = 5;
   }
+  circles.forEach((c) => {
+    c.classList.remove("active");
+  });
+
+  circles[counter].classList.add("active");
+
+  slides.forEach(function (slide) {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
+}
+function automaticCarousel() {
+  counter++;
+  carousel();
+}
+if (circles.length != 0) {
+  setInterval(automaticCarousel, 3000);
 }
 // signup and login pop up
 function show_signup_model_fun() {
@@ -73,6 +96,7 @@ function exit_fun() {
     exit_btn.addEventListener("click", () => {
       signup_model.style.display = "none";
       login_model.style.display = "none";
+      model_container.style.display = "none";
     });
   });
 }
@@ -115,12 +139,23 @@ search.addEventListener("keyup", function (e) {
     }
   });
 });
+const update_basket = () => {
+  // update basket
+  let basket = JSON.parse(localStorage.getItem("basket")); // Parse data from localstorage
+
+  if (basket) {
+    badge.textContent = basket.length;
+  }
+};
+
+setInterval(update_basket, 1000);
 
 // add to basket
 let NumberOfElement = 0;
 
 products.forEach((product) => {
   to_basket = product.querySelector(".btn-card");
+
   to_basket.addEventListener("click", function (add) {
     add.preventDefault(); // Avoid default action.
 
@@ -157,6 +192,7 @@ products.forEach((product) => {
     }
     localStorage.setItem("basket", JSON.stringify(basket));
   });
+  update_basket();
 });
 
 // change language
@@ -179,67 +215,3 @@ if (window.location.hash) {
     document.body.style.direction = "rtl";
   }
 }
-
-// //timer
-// let tempDate = new Date();
-// let tempYear = tempDate.getFullYear();
-// let tempMonth = tempDate.getMonth();
-// let tempDay = tempDate.getDate();
-// // months are ZERO index based;
-// const futureDate = new Date(tempYear, tempMonth, tempDay + 11, 7, 30, 0);
-
-// // const year = futureDate.getFullYear();
-// // const hours = futureDate.getHours();
-// // const minutes = futureDate.getMinutes();
-
-// const futureTime = futureDate.getTime();
-// function getRemaindingTime() {
-//   const today = new Date().getTime();
-
-//   const t = futureTime - today;
-//   // 1s = 1000ms
-//   // 1m = 60s
-//   // 1hr = 60m
-//   // 1d = 24hr
-//   // values in miliseconds
-//   const oneDay = 24 * 60 * 60 * 1000;
-//   // const oneHour = 60 * 60 * 1000;
-//   // const oneMinute = 60 * 1000;
-//   // calculate all values
-//   let days = t / oneDay;
-//   days = Math.floor(days);
-//   // let hours = Math.floor((t % oneDay) / oneHour);
-//   // let minutes = Math.floor((t % oneHour) / oneMinute);
-//   // let seconds = Math.floor((t % oneMinute) / 1000);
-//   // let print_time = `${hours} : ${minutes} : ${seconds}`;
-
-//   // let total = "";
-//   // // set values array
-//   // const values = [hours, minutes, seconds];
-
-//   // function format(item) {
-//   //   if (item < 10) {
-//   //     return (item = `0${item}`);
-//   //   }
-//   //   return item;
-//   // }
-
-//   // values.forEach(function (item, index) {
-//   //   total += ":" + String(format(values[index]));
-//   // });
-
-//   if (t < 0) {
-//     clearInterval(countdown);
-//     timer.textContent = `sorry, the time has finished!`;
-//   }
-//   // total = total.slice(1, 10);
-//   timer.forEach((oneTimer) => {
-//     // oneTimer.textContent = total;
-//     oneTimer.textContent = days + " يوم";
-//   });
-// }
-// // countdown;
-// let countdown = setInterval(getRemaindingTime, 1000);
-// //set initial values
-// getRemaindingTime();
-// //

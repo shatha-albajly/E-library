@@ -201,6 +201,9 @@ label {
   background: none;
   border: none;
 }
+.btn-card img {
+  cursor: pointer;
+}
 
 .book-link span {
   color: var(--blue-color);
@@ -285,7 +288,6 @@ label {
 
 @media screen and (max-width: 600px) {
   .current-offers {
-    grid-template-columns: 1fr;
     justify-content: center;
   }
 }

@@ -1,6 +1,8 @@
 const progressBar = document.getElementById("progress-bar");
 const progressNext = document.getElementById("progress-next");
 const progressPrev = document.getElementById("progress-prev");
+const progressDone = document.getElementById("progress-done");
+
 const checkoutCards = document.querySelectorAll(".checkout-card");
 const steps = document.querySelectorAll(".step");
 
@@ -48,6 +50,8 @@ const updateProgress = () => {
     progressPrev.disabled = true;
     progressPrev.style.border = "none";
   } else if (active === steps.length) {
+    // progressNext.classList.add("to-main-page");
+
     progressNext.disabled = true;
     progressNext.style.border = "none";
   } else {
@@ -56,4 +60,8 @@ const updateProgress = () => {
     progressNext.style.border = "1px solid var(--gray-color)";
     progressPrev.style.border = "1px solid var(--gray-color)";
   }
+};
+
+const clear_storage = () => {
+  localStorage.removeItem("basket");
 };

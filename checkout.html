@@ -4,16 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>checkout page</title>
-    <link rel="stylesheet" href="../css/checkout.css" />
-    <link rel="stylesheet" href="../css/book.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/book.css" />
+    <link rel="stylesheet" href="css/card.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
   </head>
   <body dir="rtl">
     <!-- header start -->
     <header>
+      <!-- <div class="finish-message"> -->
+        
+      </div>
       <div class="section-list">
         <nav>
-          <ul dir="rtl" class="header-items">
+          <ul class="header-items">
             <div class="header-item">
               <img
                 src="images/svgs/person.svg"
@@ -43,7 +48,7 @@
                 alt="star icon"
                 style="width: 20px; height: 20px"
               />
-              <li><a href="#">الرئيسية</a></li>
+              <li><a href="index.html">الرئيسية</a></li>
             </div>
             <div class="header-item">
               <img
@@ -95,16 +100,26 @@
               <li>English</li>
             </div>
           </ul>
+          <label id="sandwish">
+            <img
+              src="images/svgs/sandwish.svg"
+              style="width: 20px; margin-right: 1rem"
+              alt=""
+            />
+          </label>
+          <!-- <label id="close-nav">
+            <img src="images/svgs/xsandwish.svg" style="width: 20px" alt="" />
+          </label> -->
         </nav>
       </div>
-      <div dir="rtl" class="search-header">
-        <div class="logo">
+      <div class="search-header">
+        <a class="logo" href="index.html">
           <img
             src="images/svgs/logo.svg"
             alt=""
             style="width: 180px; height: 50px"
           />
-        </div>
+        </a>
         <div class="search-section">
           <div class="search-bar">
             <input id="search" type="search" placeholder="البحث" type="text" />
@@ -117,7 +132,7 @@
             </div>
           </div>
 
-          <a class="basket" href="checkout.html">
+          <a class="basket" href="card.html">
             <img
               src="images/svgs/red-basket.svg"
               style="width: 35px; height: 35px"
@@ -127,6 +142,10 @@
               <div class="badge">0</div>
             </div>
           </a>
+          <div class="change-language">
+            <button onclick='changeLanguage("en")'>English</button>
+            <button onclick='changeLanguage("ar")'>عربي</button>
+          </div>
         </div>
       </div>
     </header>
@@ -136,7 +155,7 @@
     <section>
       <div class="signup-model">
         <!-- login and sign up section start -->
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="signup">
             <div class="exit" onclick="exit_fun()">
               <img
@@ -206,7 +225,7 @@
         <!-- login and sign up section start end -->
       </div>
       <div class="login-model">
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="login">
             <div class="exit" onclick="exit_fun()">
               <img
@@ -243,47 +262,111 @@
       </div>
     </section>
     <!-- signup and login end -->
+
     <!-- start main -->
     <main>
       <div class="checkout-cards">
-        <div class="checkout-card">
+        <div class="checkout-card active">
           <form>
-            <div class="input-wrap">
-              <label for="firstName">الاسم الاول</label>
-              <input type="name" name="firstName" />
+            <h1 class="login-title">البيانات الشخصية</h1>
+
+            <div class="two-input">
+              <div class="input-wrap">
+                <input name="number" type="tel" />
+                <label for="name">رقم الجوال</label>
+              </div>
+              <div class="input-wrap">
+                <label for="">رمز البلد</label>
+                <input type="password" name="password" />
+              </div>
             </div>
 
             <div class="input-wrap">
-              <label for="lastName">اسم العائله</label>
-              <input type="name" name="lastName" />
+              <label for="password">الاسم الاول</label>
+              <input type="password" name="password" />
             </div>
 
             <div class="input-wrap">
-              <label for="email">البريد الالكتروني</label>
-              <input type="email" name="email" />
+              <label for="password">اسم العائله</label>
+              <input type="password" name="password" />
             </div>
 
             <div class="input-wrap">
-              <label for="password"> رقم السر</label>
+              <label for="password">البريد الالكتروني</label>
+              <input type="password" name="password" />
+            </div>
+
+            <div class="input-wrap">
+              <label for="password">كلمة السر</label>
               <input type="password" name="password" />
             </div>
           </form>
         </div>
-        <div class="checkout-card active">
+        <div class="checkout-card">
           <form>
+            <h1 class="login-title">بيانات الدفع</h1>
             <div class="input-wrap">
-              <label for="number">ادخل حسابك</label>
-              <input type="text" name="number" />
-            </div>
-            <div class="input-wrap">
-              <label for="password">ادخل رقم السر</label>
+              <label for="password">الاسم الاول</label>
               <input type="password" name="password" />
             </div>
+
+            <div class="input-wrap">
+              <label for="password">اسم العائله</label>
+              <input type="password" name="password" />
+            </div>
+
+            <div class="input-wrap">
+              <label for="password">البريد الالكتروني</label>
+              <input type="password" name="password" />
+            </div>
+            <div class="input-wrap">
+              <label for="date">تاريخ انتهاء البطاقة</label>
+              <input type="date" name="date" />
+            </div>
+
+            <div class="two-input">
+              <div class="input-wrap">
+                <input name="number" type="tel" />
+                <label for="name">رقم البطاقة</label>
+              </div>
+              <div class="input-wrap">
+                <label for="">CV2</label>
+                <input type="password" name="password" />
+              </div>
+            </div>
           </form>
+        </div>
+        <div class="checkout-card">
+          <div class="card-content">
+            <div class="total-price">
+              <div>
+                <div class="total-price-row total-row">
+                  <p>المجموع</p>
+                  <p id="total">0</p>
+                </div>
+                <div class="total-price-row shiping-row">
+                  <p>تكاليف الشحن</p>
+                  <p id="shipping-price">مجاني</p>
+                </div>
+                <div class="total-price-row final-total-row">
+                  <p>المجموع الكلي</p>
+                  <p id="final-total-price">0</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="checkout-card">
           <p>تمت العملية بنجاح</p>
+          <p>اضغط على زر التالي لإنهاء العمليه</p>
+          <a
+            id="progress-done"
+            href="index.html"
+            onclick="clear_storage()"
+            class="btn"
+            >انهاء</a
+          >
         </div>
       </div>
       <div class="container progress">
@@ -518,8 +601,9 @@
       </div>
     </footer>
     <!-- footer end -->
+    <script src="js/scripts.js"></script>
+    <script src="js/card.js"></script>
 
-    <script src="../js/checkout.js"></script>
-    <script src="../js/scripts.js"></script>
+    <script src="js/checkout.js"></script>
   </body>
 </html>

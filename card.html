@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>card page</title>
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/products.css" />
-    <link rel="stylesheet" href="../css/book.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
 
-    <link rel="stylesheet" href="../css/card.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/products.css" />
+    <link rel="stylesheet" href="css/book.css" />
+
+    <link rel="stylesheet" href="css/card.css" />
   </head>
   <body dir="rtl">
     <!-- header start -->
     <header>
       <div class="section-list">
         <nav>
-          <ul dir="rtl" class="header-items">
+          <ul class="header-items">
             <div class="header-item">
               <img
                 src="images/svgs/person.svg"
@@ -45,7 +52,7 @@
                 alt="star icon"
                 style="width: 20px; height: 20px"
               />
-              <li><a href="#">الرئيسية</a></li>
+              <li><a href="index.html">الرئيسية</a></li>
             </div>
             <div class="header-item">
               <img
@@ -97,16 +104,22 @@
               <li>English</li>
             </div>
           </ul>
+          <label id="sandwish">
+            <img src="images/svgs/sandwish.svg" style="width: 20px" alt="" />
+          </label>
+          <!-- <label id="close-nav">
+            <img src="images/svgs/xsandwish.svg" style="width: 20px" alt="" />
+          </label> -->
         </nav>
       </div>
-      <div dir="rtl" class="search-header">
-        <div class="logo">
+      <div class="search-header">
+        <a class="logo" href="index.html">
           <img
             src="images/svgs/logo.svg"
             alt=""
             style="width: 180px; height: 50px"
           />
-        </div>
+        </a>
         <div class="search-section">
           <div class="search-bar">
             <input id="search" type="search" placeholder="البحث" type="text" />
@@ -129,6 +142,10 @@
               <div class="badge">0</div>
             </div>
           </a>
+          <div class="change-language">
+            <button onclick='changeLanguage("en")'>English</button>
+            <button onclick='changeLanguage("ar")'>عربي</button>
+          </div>
         </div>
       </div>
     </header>
@@ -138,7 +155,7 @@
     <section>
       <div class="signup-model">
         <!-- login and sign up section start -->
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="signup">
             <div class="exit" onclick="exit_fun()">
               <img
@@ -208,7 +225,7 @@
         <!-- login and sign up section start end -->
       </div>
       <div class="login-model">
-        <div dir="rtl" class="login-signup">
+        <div class="login-signup">
           <div class="login">
             <div class="exit" onclick="exit_fun()">
               <img
@@ -250,52 +267,18 @@
       <div class="container basket-prices active">
         <div class="title-basket">
           <img src="images/svgs/gray-basket.svg" alt="" />
-          <input type="number" id="number" value="0" />
 
           <h2>السلّة</h2>
         </div>
-        <div class="card-content">
-          <div class="products">
-            <div class="product">
-              <div class="product-image">
-                <img src="images/book1front.jpg" alt="" />
-              </div>
-              <div class="product-div-without-image">
-                <div class="product-info">
-                  <div class="product-name">
-                    <h2>
-                      <a href="book.html">
-                        <p>لانك الله رحلة الى السماء السابعة‎</p>
-                      </a>
-                    </h2>
-                  </div>
-                  <div class="discount-label">
-                    <p>منتج قابل للخصم لحاملي بطاقة خصم مكتبة جرير</p>
-                  </div>
-                  <div class="yellow-note">
-                    <p>
-                      <span>ملاحظة: </span>
-                      هذا المنتج رقمي وسيتم توصيله من خلال البريد الالكتروني
-                    </p>
-                    <a href="#">كيفية الحصول على المنتج؟</a>
-                  </div>
-                </div>
-                <div class="price-box">
-                  <div class="price">
-                    <p>17.54</p>
 
-                    <span class="price_currency"> رس </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="card-content">
+          <div class="products"></div>
 
           <div class="total-price">
             <div>
               <div class="total-price-row total-row">
                 <p>المجموع</p>
-                <p id="total">4</p>
+                <p id="total">0</p>
               </div>
               <div class="total-price-row shiping-row">
                 <p>تكاليف الشحن</p>
@@ -303,11 +286,13 @@
               </div>
               <div class="total-price-row final-total-row">
                 <p>المجموع الكلي</p>
-                <p id="final-total-price">33</p>
+                <p id="final-total-price">0</p>
               </div>
             </div>
             <div class="total-price-button">
-              <button>تحديث سلة التسوق</button>
+              <button>
+                <a href="checkout.html"> تحديث سلة التسوق</a>
+              </button>
             </div>
           </div>
         </div>
@@ -530,6 +515,9 @@
     </footer>
     <!-- footer end -->
 
-    <script src="../js/card.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/scripts.js"></script>
   </body>
 </html>
+
+<
